@@ -59,14 +59,14 @@ document.addEventListener("DOMContentLoaded", () => {
 								${item.guarantee}
 							</p>
 						</div>
-
+                        <div class="overflow-hidden">
 						<img
-							class="object-cover bg-white w-full h-48 mt-2"
+							class="object-cover bg-white w-full h-48 mt-2 hover:scale-105 duration-300"
 							loading="lazy"
 							src="${item.image}"
 							alt="NIKE AIR"
 						/>
-
+                        </div>
 						<div
 							class="flex items-center justify-between px-4 py-2 bg-gray-900"
 						>
