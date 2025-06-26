@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My - blog || Car</title>
+		<link rel="stylesheet" href="./assets/style/style.css" />
+		<link
+			rel="icon"
+			href="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=100"
+		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
+	<body class="bg-gray-900">
+		<!-- loader -->
+		<div id="loader" class="fixed top-0 left-0 right-0 bottom-0 bg-white">
+			<div
+				class="lds-dual-ring absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+			></div>
+		</div>
+		<!--  -->
+		<!-- addConfirmModal -->
+		<div
+			id="confirmModal"
+			class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 duration-300 fixed bottom-6 -right-full index"
+		>
+			<div class="flex items-center justify-center w-12 bg-emerald-500">
+				<svg
+					class="w-6 h-6 text-white fill-current"
+					viewBox="0 0 40 40"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z"
+					/>
+				</svg>
+			</div>
+			<div class="px-4 py-2 -mx-3">
+				<div class="mx-3">
+					<span class="font-semibold text-emerald-500 dark:text-emerald-400"
+						>Success</span
+					>
+					<p class="text-sm text-gray-600 dark:text-gray-200">
+						Your car info added!
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+		<!-- deleteConfirmModal -->
+		<div
+			id="deleteModal"
+			class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 duration-300 fixed bottom-6 -right-full index"
+		>
+			<div class="flex items-center justify-center w-12 bg-red-500">
+				<svg
+					class="w-6 h-6 text-white fill-current"
+					viewBox="0 0 40 40"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M20 3.36667C10.8167 3.36667 3.3667 10.8167 3.3667 20C3.3667 29.1833 10.8167 36.6333 20 36.6333C29.1834 36.6333 36.6334 29.1833 36.6334 20C36.6334 10.8167 29.1834 3.36667 20 3.36667ZM19.1334 33.3333V22.9H13.3334L21.6667 6.66667V17.1H27.25L19.1334 33.3333Z"
+					/>
+				</svg>
+			</div>
+
+			<div class="px-4 py-2 -mx-3">
+				<div class="mx-3">
+					<span class="font-semibold text-red-500 dark:text-red-400"
+						>Deleted</span
+					>
+					<p class="text-sm text-gray-600 dark:text-gray-200">
+						Your car info deleted!
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--  -->
+		<!-- modal -->
+		<div
+			id="modal"
+			class="w-full h-[100vh] bg-[#00000088] fixed top-0 left-0 z-50 show"
+		>
+			<section
+				class="index max-w-2xl w-[90%] sm:w-4/5 p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 fixed top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+			>
+				<h2
+					class="text-lg font-semibold text-gray-700 capitalize dark:text-white"
+				>
+					Add Car Info
+				</h2>
+
+				<form class="form">
+					<div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+						<div>
+							<label class="text-gray-700 dark:text-gray-200" for="carName"
+								>Car name</label
+							>
+							<input
+								required
+								id="carName"
+								type="text"
+								placeholder="Car name"
+								class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+							/>
+						</div>
+
+						<div>
+							<label class="text-gray-700 dark:text-gray-200" for="carPrice"
+								>Car Price</label
+							>
+							<input
+								required
+								id="carPrice"
+								type="number"
+								placeholder="Car price"
+								class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+							/>
+						</div>
+
+						<div>
+							<label class="text-gray-700 dark:text-gray-200" for="cardBrand"
+								>Car Brand</label
+							>
+							<input
+								required
+								id="cardBrand"
+								type="text"
+								placeholder="Car brand"
+								class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+							/>
+						</div>
+
+						<div>
+							<label class="text-gray-700 dark:text-gray-200" for="carColor"
+								>Car Color</label
+							>
+							<input
+								required
+								id="carColor"
+								type="text"
+								placeholder="Car color"
+								class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+							/>
+						</div>
+
+						<div>
+							<label class="text-gray-700 dark:text-gray-200" for="carGuarantee"
+								>Car Guarantee</label
+							>
+							<input
+								required
+								id="carGuarantee"
+								type="number"
+								placeholder="Car guarantee"
+								class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+							/>
+						</div>
+					</div>
+
+					<div class="flex justify-end gap-3 mt-6">
+						<button
+							id="submitModal"
+							type="submit"
+							class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+						>
+							Save
+						</button>
+						<button
+							id="cancelModal"
+							type="button"
+							class="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+						>
+							Close
+						</button>
+					</div>
+				</form>
+			</section>
+		</div>
+
+		<!--  -->
+		<!-- header -->
+		<header class="bg-gray-800 mb-10 sticky top-0 left-0 index">
+			<nav class="container h-[80px] flex items-center justify-between">
+				<!-- logo -->
+				<div class="flex items-center gap-x-2">
+					<img
+						class="object-cover w-10 h-10 rounded-full"
+						src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=880&h=880&q=100"
+						alt=""
+					/>
+					<div>
+						<h1
+							class="text-sm sm:text-lg font-semibold text-gray-700 capitalize dark:text-white"
+						>
+							Abdulaziz Abdugafurov
+						</h1>
+
+						<p class="text-sm text-gray-500 dark:text-gray-400">
+							abuxyziabd@gmail.com
+						</p>
+					</div>
+				</div>
+				<!--  -->
+				<!-- add -->
+				<button
+					id="modalBtn"
+					class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+				>
+					Add Car
+				</button>
+				<!--  -->
+			</nav>
+		</header>
+		<!--  -->
+		<main>
+			<section>
+				<div
+					class="wrapper container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
+				></div>
+			</section>
+		</main>
+		<!--  -->
+		<script src="./assets/script/app.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init()
+		</script>
+	</body>
+</html>

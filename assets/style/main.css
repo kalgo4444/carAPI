@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+button,
+input {
+	cursor: pointer;
+}
+
+.container {
+	max-width: 1340px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.show {
+	display: none;
+}
+.showConfirm {
+	right: 30px;
+}
+.showDelete {
+	right: 30px;
+}
+
+.overflow {
+	overflow: hidden;
+}
+.index {
+	z-index: 100;
+}
+
+.lds-dual-ring,
+.lds-dual-ring:after {
+	box-sizing: border-box;
+}
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+}
+.lds-dual-ring:after {
+	content: ' ';
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6.4px solid currentColor;
+	border-color: currentColor transparent currentColor transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
