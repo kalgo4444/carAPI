@@ -49,14 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
 							>
 								${item.name}
 							</h1>
-							<i class="mt-1 text-sm text-gray-600 dark:text-gray-400 block">
-								${item.brand}
-							</i>
-							<strong class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-								${item.color}
-							</strong>
+							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400 block">
+								Brand: <i>${item.brand}</i>
+							</p>
 							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-								${item.guarantee}
+								Color: <b>${item.color}</b>
+							</p>
+							<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+								Guarantee: ${item.guarantee} year
 							</p>
 						</div>
                         <div class="overflow-hidden">
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							class="object-cover bg-white w-full h-48 mt-2 hover:scale-105 duration-300"
 							loading="lazy"
 							src="${item.image}"
-							alt="NIKE AIR"
+							alt="Card Img"
 						/>
                         </div>
 						<div
